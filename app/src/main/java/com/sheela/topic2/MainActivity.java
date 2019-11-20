@@ -13,9 +13,9 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private EditText etFirst, etSecond;
     private Button btnCalculate;
-    private RadioButton rdnAdd, rdnSub;
+    private RadioButton rdnAdd, rdnSub,rdnMulti;
 
-    ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         btnCalculate = findViewById(R.id.btnCalculate);
         rdnAdd = findViewById(R.id.rdnAdd);
         rdnSub = findViewById(R.id.rdnSub);
+        rdnMulti=findViewById(R.id.rdnMulti);
        btnCalculate.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
@@ -48,9 +49,14 @@ public class MainActivity extends AppCompatActivity {
                second=Integer.parseInt(etSecond.getText().toString());
               if (rdnAdd.isChecked()){
                   result= first +second;
-              } else{
+              } else if(rdnSub.isChecked()){
                   result=first-second;
               }
+              else{
+                  result=first*second;
+              }
+
+
                Toast.makeText(MainActivity.this, "Result is:" +result,Toast.LENGTH_LONG).show();
 
            }

@@ -10,12 +10,14 @@
     <EditText
         android:id="@+id/etFirst"
         android:textSize="50dp"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="enter first no"/>
     <EditText
         android:id="@+id/etsecond"
         android:textSize="50dp"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="enter second no"/>
@@ -24,6 +26,7 @@
         android:layout_height="wrap_content">
         <RadioButton
             android:id="@+id/rdnAdd"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="30sp"
@@ -34,12 +37,19 @@
             android:layout_height="wrap_content"
             android:textSize="30sp"
             android:text="Sub"/>
+        <RadioButton
+            android:id="@+id/rdnMulti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Multi"/>
 
     </RadioGroup>
 
 
 <Button
     android:id="@+id/btnCalculate"
+
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:textSize="20dp"
